@@ -13,5 +13,5 @@ RUN         [ -d /opt/nicescale/docker ] || mkdir -p /opt/nicescale/nicedocker
 ADD         . /opt/nicescale/docker
 
 EXPOSE      6379
-CMD         /usr/sbin/redis-server
+CMD         /usr/sbin/redis-server /etc/redis/redis.conf
 
