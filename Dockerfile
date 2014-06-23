@@ -9,9 +9,8 @@ RUN         DEBIAN_FRONTEND=noninteractive apt-get -y install redis-server
 # listen all interfaces
 RUN         sed -i -e 's/^bind.*/#bind 127.0.0.1/' -e 's/^daemon.*/#daemon yes/' /etc/redis/redis.conf
 
-RUN         [ -d /opt/nicescale/docker ] || mkdir -p /opt/nicescale/nicedocker
 ADD         . /opt/nicescale/docker
 
 EXPOSE      6379
-CMD         /usr/sbin/redis-server /etc/redis/redis.conf
+CMD         /usr/bin/redis-server /etc/redis/redis.conf
 
