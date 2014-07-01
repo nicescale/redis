@@ -3,7 +3,21 @@ redis
 
 redis server for docker
 
-Run build.sh to build your redis docker.
-Run run.sh to run your redis docker.
+Build
+-----
+
+  docker build -t nicescale/redis .
+
+Run
+-----
+
+  . path.ini
+  docker run -d nicescale/redis
 
 Redis data locate in $HOME/data and log locate in $HOME/log
+
+Logs
+-----
+
+Cron run in docker for logrotate
+

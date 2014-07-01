@@ -1,8 +1,5 @@
 #!/bin/bash
 
-. path.ini
+/usr/sbin/cron
 
-mkdir -p $HOME/data
-mkdir -p $HOME/log
-
-docker run  -d -v $HOME/data:$data -v $HOME/log:$log nicescale/redis
+exec /usr/bin/redis-server /etc/redis/redis.conf
