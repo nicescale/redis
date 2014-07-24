@@ -29,7 +29,7 @@ Connect to redis server
 -----
 
 ```
-  docker run --rm -it --link=redserver:red nicescale/redis sh -c "redis-cli -h \$RED\_PORT\_6379\_TCP\_ADDR"
+  docker run --rm -it --link=redserver:red nicescale/redis sh -c "redis-cli -h $RED_PORT_6379_TCP_ADDR"
 ```
 
 
